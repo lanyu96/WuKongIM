@@ -17,7 +17,7 @@ services:
       retries: 3       
     restart: always  
     volumes:
-      - ./wukongimdata:/root/wukongim # 数据挂载到物理机的目录
+      - /zhou/docker/tangsengdaodao/wukongim:/root/wukongim # 数据挂载到物理机的目录
     ports:
       - 5001:5001 # http api 端口
       - 5100:5100 # tcp端口
@@ -28,6 +28,6 @@ services:
   prometheus:  # 监控服务
     image: registry.cn-shanghai.aliyuncs.com/wukongim/prometheus:v2.53.1
     volumes:
-      - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+      - "/zhou/docker/tangsengdaodao/monitor/prometheus.yml:/etc/prometheus/prometheus.yml"
     ports:
       - "9090:9090"

@@ -25,9 +25,9 @@ services:
       - 5300:5300 # 管理端端口
       - 5172:5172 # demo端口
       - 11110:11110 # 分布式节点通讯端口
-  prometheus:  # 监控服务
-    image: registry.cn-shanghai.aliyuncs.com/wukongim/prometheus:v2.53.1
-    volumes:
-      - "/zhou/docker/tangsengdaodao/monitor/prometheus:/etc/prometheus"
-    ports:
-      - "9090:9090"
+  # prometheus:  # 监控服务
+  #   image: registry.cn-shanghai.aliyuncs.com/wukongim/prometheus:v2.53.1
+  #   volumes:
+  #     - "/zhou/docker/tangsengdaodao/monitor/prometheus:/etc/prometheus"
+  #   ports:
+  #     - "9090:9090"
